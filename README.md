@@ -1,65 +1,29 @@
-# BlacklakeTranslate README
+# Translate Extension For Blacklake
 
-This is the README for your extension "BlacklakeTranslate". After writing up a brief description, we recommend including the following sections.
+## Get Started
 
-## Features
+### you project should have a file named is .bl-custom.json, file content like
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+```json
+  {
+    "i18nKey": "0" // your i18n key
+  }
+```
 
-For example if there is an image subfolder under your extension project workspace:
+## How To Use
 
-\!\[feature X\]\(images/feature-x.png\)
+### For Web
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+#### right click to BLFormattedMessage or `cmd+i` (ctrl + i)
 
-## Requirements
+Selected text like `{text}` will wrapped with `<FormattedMessage defaultMessage={text}>`. In the meantime, select text will auto translate to all language json files.
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+#### right click to BLi18n or `cmd+ shift + i` (ctrl + shift + i)
 
-## Extension Settings
+Selected text like `{text}` will auto translate to all language json files.
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+### For App
 
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+right click  to BLTranslate or `cmd+i` (ctrl + i )  
+selected text like `你好` will formatted to `i18nConfigGlobal.t('${appTranslateKey}')`, the extension will find the word in all language file. if it exists,  appTranslateKey is the word key, if not , it will write a new word key to corresponding files first.  
+like ``` `${user}, 你好` ``` will be formatted to `i18nConfigGlobal.w('${appTranslateKey}', { user })` with the default param `user` put in already.
