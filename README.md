@@ -14,7 +14,7 @@
 
 ### For Web
 
-#### right click to BLFormattedMessage or `cmd+i` (ctrl + i)
+#### right click to BLTranslate or `cmd+i` (ctrl + i)
 
 Selected text like `{text}` will wrapped with `<FormattedMessage defaultMessage={text}>`. In the meantime, select text will auto translate to all language json files.
 
@@ -24,6 +24,6 @@ Selected text like `{text}` will auto translate to all language json files.
 
 ### For App
 
-right click  to BLTranslate or `cmd+i` (ctrl + i )  
+right click to BLTranslate or `cmd+i` (ctrl + i)  
 selected text like `你好` will formatted to `i18nConfigGlobal.t('${appTranslateKey}')`, the extension will find the word in all language file. if it exists,  appTranslateKey is the word key, if not , it will write a new word key to corresponding files first.  
 like ``` `${user}, 你好` ``` will be formatted to `i18nConfigGlobal.w('${appTranslateKey}', { user })` with the default param `user` put in already.

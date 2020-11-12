@@ -205,7 +205,7 @@ export function activate(context: vscode.ExtensionContext) {
 	// Now provide the implementation of the command with registerCommand
 	// The commandId parameter must match the command field in package.json
 	let disposable1 = vscode.commands.registerTextEditorCommand(
-		'extension.BLFormattedMessage',
+		'extension.BLTranslate',
 		(TextEditor, TextEditorEdit) => {
 		  // The code you place here will be executed every time your command is executed
 		  const selection = TextEditor.selections[0];

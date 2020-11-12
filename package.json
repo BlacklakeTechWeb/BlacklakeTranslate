@@ -16,7 +16,7 @@
 	],
 	"activationEvents": [
 		"onCommand:extension.BLi18n",
-		"onCommand:extension.BLFormattedMessage"
+		"onCommand:extension.BLTranslate"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
@@ -26,8 +26,8 @@
 				"title": "BLTranslate: BLi18n"
 			},
 			{
-				"command": "extension.BLFormattedMessage",
-				"title": "BLTranslate: BLFormattedMessage"
+				"command": "extension.BLTranslate",
+				"title": "BLTranslate: BLTranslate"
 			}
 		],
 		"menus": {
@@ -36,13 +36,13 @@
 					"command": "extension.BLi18n"
 				},
 				{
-					"command": "extension.BLFormattedMessage"
+					"command": "extension.BLTranslate"
 				}
 			]
 		},
 		"keybindings": [
 			{
-				"command": "extension.BLFormattedMessage",
+				"command": "extension.BLTranslate",
 				"key": "ctrl+i",
 				"mac": "cmd+i",
 				"when": "editorTextFocus"
